@@ -1,0 +1,12 @@
+# Load Git Prompt
+source ~/.git-prompt.sh
+
+# Git prompt settings
+export GIT_PS1_SHOWDIRTYSTATE=1  # Show `*` for unstaged and `+` for staged changes
+export GIT_PS1_SHOWSTASHSTATE=1  # Show `$` if something is stashed
+export GIT_PS1_SHOWUPSTREAM="auto"  # Show tracking branch info
+
+# Prompt setup
+export PS1='[\#]>[\d]>[\u]@\w\[\033[0m\] \[\033[0;36m\]$(__git_ps1 "(%s)")\[\033[0m\] \nλ '
+export PROMPT_COMMAND='history -a'  # Save history after every command
+
